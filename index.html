@@ -29,8 +29,34 @@
     </style>
 </head>
 
-<body>
+<body class="bg-[#F8FAFC]">
     
+    <header class="container mx-auto pt-14 pb-14 space-y-6 border-b border-b-[#E6E7E9]">
+        <div>
+            <h1 class="font-bold text-[2rem]">Job Application Tracker</h1>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="p-5 bg-white rounded-lg space-y-2 shadow-lg transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+                <p class="font-semibold text-gray-500">Total</p>
+                <p id="total" class="text-[1.5rem] font-bold">0</p>
+            </div>
+            <div class="p-5 bg-white rounded-lg space-y-2 drop-shadow-lg transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+                <p class="font-semibold text-gray-500">Interview</p>
+                <p id="Interview" class="text-[1.5rem] font-bold text-green-600">0</p>
+            </div>
+            <div class="p-5 bg-white rounded-lg space-y-2 shadow-lg transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+                <p class="font-semibold text-gray-500">Rejected</p>
+                <p id="Rejected" class="text-[1.5rem] font-bold text-red-700">0</p>
+            </div>
+            
+        </div>
+    </header>
+
+
     <script src="./script.js"></script>
 </body>
 
