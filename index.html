@@ -30,7 +30,7 @@
 </head>
 
 <body class="bg-[#F8FAFC]">
-    
+
     <header class="container mx-auto pt-14 pb-14 space-y-6 border-b border-b-[#E6E7E9]">
         <div>
             <h1 class="font-bold text-[2rem]">Job Application Tracker</h1>
@@ -52,10 +52,348 @@
                 <p class="font-semibold text-gray-500">Rejected</p>
                 <p id="Rejected" class="text-[1.5rem] font-bold text-red-700">0</p>
             </div>
-            
+
         </div>
     </header>
 
+    <main id="available-jobs" class="container mx-auto pt-14 pb-14 space-y-6 border-b border-b-[#E6E7E9]">
+        <div class="flex justify-between">
+            <h1 class="font-semibold text-[1.5rem]">Available Jobs</h1>
+            <p><span id="job-number">0</span> Jobs</p>
+        </div>
+
+
+        <div class="mb-6 flex gap-2">
+            <button class="bg-[#3B82F6] rounded-lg text-white px-8 py-2 cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105" id="all-filter-btn">
+                All
+            </button>
+            <button
+                class="bg-white border border-gray-200 rounded-lg text-[#64748B] font-medium px-8 py-2 cursor-pointer transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 hover:scale-105"
+                id="interview-filter-btn">
+                Interview
+            </button>
+            <button
+                class="bg-white border border-gray-200 rounded-lg text-[#64748B] font-medium px-8 py-2 cursor-pointer transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 hover:scale-105"
+                id="rejected-filter-btn">
+                Rejected
+            </button>
+        </div>
+
+
+        <section id="job-cards" class="space-y-6 pt-8">
+            <!-- card 1 -->
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- first card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">Mobile First Corp</h3>
+                        <p class="text-gray-500">React Native Developer</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- first card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Remote • Full-time • $130,000 - $175,000</p>
+                </div>
+
+                <!-- first card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600">Build cross-platform mobile applications using React Native. Work on products used by millions of
+                        users worldwide.</p>
+                </div>
+
+                <!-- first card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+
+            <!-- card 2 -->
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- second card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">TechNova Inc</h3>
+                        <p class="text-gray-500">Frontend Developer</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- sec card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Remote • Contract • $90,000 - $120,000</p>
+                </div>
+
+                <!-- sec card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600">Develop modern UI using React and Tailwind CSS.</p>
+                </div>
+
+                <!-- sec card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+
+            <!-- third card -->
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- third card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">CloudSync Lt</h3>
+                        <p class="text-gray-500">Backend Developer</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- third card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Onsite • Full-time • $110,000 - $150,000</p>
+                </div>
+
+                <!-- third card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600">Design scalable APIs and manage cloud infrastructure.</p>
+                </div>
+
+                <!-- third card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+
+            <!-- 4th card -->
+
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- 4th card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">NextGen Solutions</h3>
+                        <p class="text-gray-500">Full Stack Developer</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- 4th card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Hybrid • Full-time • $120,000 - $160,000</p>
+                </div>
+
+                <!-- 4th card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600"> Work on both frontend and backend systems.</p>
+                </div>
+
+                <!-- 4th card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+
+             <!-- 5th card -->
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- 5th card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">Bright AI</h3>
+                        <p class="text-gray-500">Machine Learning Engineer</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- 5th card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Remote • Full-time • $140,000 - $190,000</p>
+                </div>
+
+                <!-- 5th card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600"> Develop and train advanced machine learning models to solve real-world problems.
+        Work with large datasets, and deploy scalable AI
+        solutions into production environments used by thousands of users.</p>
+                </div>
+
+                <!-- 5th card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+
+             <!-- 6th card -->
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- 6th card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">SecureNet</h3>
+                        <p class="text-gray-500">Cyber Security Analyst</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- 6th card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Onsite • Full-time • $100,000 - $135,000</p>
+                </div>
+
+                <!-- 6th card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600">  Monitor network traffic and identify potential security threats. 
+        Perform vulnerability assessments, implement security policies, 
+        and ensure company systems and sensitive data remain fully protected 
+        from cyber attacks and unauthorized access.</p>
+                </div>
+
+                <!-- 6th card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+
+             <!-- 7th card -->
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- 7th card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">DataWave</h3>
+                        <p class="text-gray-500">Data Analyst</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- 7th card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Remote • Part-time • $70,000 - $95,000</p>
+                </div>
+
+                <!-- 7th card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600"> Collect, clean, and analyze business data to uncover meaningful insights.
+        Create detailed reports and dashboards to help stakeholders make 
+        data-driven decisions and improve overall company performance.</p>
+                </div>
+
+                <!-- 7th card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+
+             <!-- 8th card -->
+            <div class="card bg-white rounded-lg p-7">
+
+                <!-- 8th card [first div] -->
+                <div class="flex justify-between">
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-[1.5rem]">PixelCraft Studio</h3>
+                        <p class="text-gray-500">UI/UX Designer</p>
+                    </div>
+
+                    <div>
+                        <span class="cursor-pointer border border-gray-500 p-2 rounded-full"><i
+                                class="fa-regular fa-trash-can"></i></span>
+                    </div>
+                </div>
+                <!-- 8th card [second div] -->
+                <div class="text pt-5">
+                    <p class="text-gray-500">Hybrid • Contract • $85,000 - $110,000</p>
+                </div>
+
+                <!-- 8th card [third div] -->
+                <div class="pt-5 space-y-3 sm:space-y-2">
+                    <button class="update bg-[#EEF4FF] text-[#002C5C] font-medium py-4 px-3 rounded-lg">NOT
+                        APPLIED</button>
+                    <p class="text-gray-600">Design intuitive and visually appealing user interfaces for web and mobile apps.
+        Conduct user research, create wireframes and prototypes, and collaborate 
+        closely with developers to deliver seamless and engaging user experiences.</p>
+                </div>
+
+                <!-- 8th card [fourth div] -->
+                 <div class="pt-5 flex gap-2">
+                     <button class="py-2 px-3 border-2 border-[#10B981] text-[#10B981] rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105">Interview</button>
+                     <button class="py-2 px-3 border-2 border-[#EF4444] text-[#EF4444] rounded-lg cursor-pointer                 transition-all duration-300 ease-in-out 
+                hover:shadow-2xl hover:-translate-y-1 hover:scale-105   ">Rejected</button>
+                     </div>
+
+            </div>
+            
+
+        </section>
+
+
+    </main>
 
     <script src="./script.js"></script>
 </body>
