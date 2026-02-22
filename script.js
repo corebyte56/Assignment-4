@@ -163,11 +163,30 @@ mainContainer.addEventListener('click', function(event){
     Rejected = Rejected.filter(item => item.companyName !== companyName);
 
     calculateCount();
-}
+    }   
+    
 })
+
+
+function showNoJobsMessage() {
+    filteredSection.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-[150px] px-16 rounded-lg bg-white">
+            <img src="./images/jobs.png" alt="">
+            <p class="mt-4 font-semibold pb-2 text-xl text-gray-600">No jobs available</p>
+            <p class="text-[#64748B] text-center">Check back soon for new job opportunities</p>
+        </div>
+    `;
+}
+
+
 
 function renderInterview(){
     filteredSection.innerHTML = '';
+
+    if (Interview.length === 0) {
+    showNoJobsMessage();
+    return;
+    }
 
     for(let i of Interview){
 
@@ -214,6 +233,11 @@ function renderInterview(){
 
 function renderRejected(){
     filteredSection.innerHTML = '';
+
+    if (Rejected.length === 0) {
+    showNoJobsMessage();
+    return;
+    }
 
     for(let i of Rejected){
 
