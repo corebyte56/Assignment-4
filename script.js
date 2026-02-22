@@ -16,6 +16,18 @@ const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
 const rejectedFilterBtn = document.getElementById('rejected-filter-btn');
 
+const deleteElement = document.querySelectorAll('.delete');
+
+// for(let del of deleteElement){
+//     del.addEventListener('click', function(event){
+//         let parentElementOfDelete = event.target.parentNode.parentNode.parentNode.parentNode;
+//         parentElementOfDelete.remove();
+//         calculateCount();
+//     })
+
+    
+// }
+
 
 function calculateCount(){
     jobNumberElement.innerText = jobCard.childElementCount;
@@ -68,6 +80,7 @@ function toggleBtn(id){
 toggleBtn('all-filter-btn');
 
 mainContainer.addEventListener('click', function(event){
+
     if(event.target.classList.contains('interview-btn')){
         const parrentNode = event.target.parentNode.parentNode;
 
@@ -96,8 +109,8 @@ mainContainer.addEventListener('click', function(event){
 
      Rejected = Rejected.filter(item => item.companyName != obj1.companyName)
 
-        if (currentStatus == 'interview-filter-btn') {
-            renderInterview();
+        if (currentStatus == 'rejected-filter-btn') {
+            renderRejected();
         }
 
         calculateCount();
@@ -132,13 +145,24 @@ mainContainer.addEventListener('click', function(event){
 
         Interview = Interview.filter(item => item.companyName != obj2.companyName)
 
-        if(currentStatus == 'rejected-filter-btn'){
-            renderRejected();
+        if(currentStatus == 'interview-filter-btn'){
+            renderInterview();
         }
     
     calculateCount();    
-    
+    }
 
+    else if(event.target.closest('.delete')){
+    const card = event.target.closest('.card');
+    const companyName = card.querySelector('.company-name').innerText;
+
+   
+    card.remove();
+
+    Interview = Interview.filter(item => item.companyName !== companyName);
+    Rejected = Rejected.filter(item => item.companyName !== companyName);
+
+    calculateCount();
 }
 })
 
