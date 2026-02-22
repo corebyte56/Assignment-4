@@ -11,6 +11,8 @@ let mainContainer = document.querySelector('main');
 let filteredSection = document.getElementById('filtered-section')
 let jobCard = document.getElementById('job-cards');
 let jobNumberElement = document.getElementById('job-number');
+let jobQuantity = document.getElementById('job-quantity');
+let allJobs = document.getElementById('all-jobs')
 
 const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
@@ -63,15 +65,21 @@ function toggleBtn(id){
     if(id == 'all-filter-btn'){
         jobCard.classList.remove('hidden')
         filteredSection.classList.add('hidden')
+        allJobs.classList.remove('hidden')
+        jobQuantity.classList.add('hidden')
     }
     else if(id == 'interview-filter-btn'){
         jobCard.classList.add('hidden')
         filteredSection.classList.remove('hidden')
+        allJobs.classList.add('hidden')
+        jobQuantity.classList.remove('hidden')
         renderInterview();
     }
     else if (id == 'rejected-filter-btn') {
         jobCard.classList.add('hidden');
         filteredSection.classList.remove('hidden');
+        allJobs.classList.add('hidden')
+        jobQuantity.classList.remove('hidden')
         renderRejected();
     }
     
@@ -181,6 +189,15 @@ function showNoJobsMessage() {
 
 
 function renderInterview(){
+
+    jobQuantity.innerHTML = '';
+    let div = document.createElement('div');
+    div.className = 'flex justify-between px-4 sm:px-1';
+    div.innerHTML =  `<h1 class="font-semibold text-[1.5rem]">Interview Jobs</h1>
+            <p>${Interview.length} of ${jobCard.childElementCount} Jobs</p>`
+
+        jobQuantity.appendChild(div);
+
     filteredSection.innerHTML = '';
 
     if (Interview.length === 0) {
@@ -232,6 +249,15 @@ function renderInterview(){
 
 
 function renderRejected(){
+
+    jobQuantity.innerHTML = '';
+    let div = document.createElement('div');
+    div.className = 'flex justify-between px-4 sm:px-1';
+    div.innerHTML =  `<h1 class="font-semibold text-[1.5rem]">Rejected Jobs</h1>
+            <p>${Rejected.length} of ${jobCard.childElementCount} Jobs</p>`
+
+        jobQuantity.appendChild(div);
+
     filteredSection.innerHTML = '';
 
     if (Rejected.length === 0) {
